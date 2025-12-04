@@ -14,10 +14,10 @@
   <meta property="og:description" content="We are crafting powerful digital solutions with performance, automation, and data at the core." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.biziotech.com/" />
-  <!-- Optional: when you have a social preview image, update this -->
-  <!-- <meta property="og:image" content="https://www.biziotech.com/assets/preview.png" /> -->
+  <!-- OG Preview Image (create this later as /assets/preview.png) -->
+  <meta property="og:image" content="https://www.biziotech.com/assets/preview.png" />
 
-  <!-- Favicon (you upload this to /assets/favicon.png) -->
+  <!-- Favicon (upload to /assets/favicon.png) -->
   <link rel="icon" type="image/png" href="assets/favicon.png" />
 
   <style>
@@ -108,7 +108,34 @@
     .subtitle {
       font-size: 14px;
       opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    /* ========= Animated Tagline ========= */
+    .tagline {
+      font-size: 14px;
+      font-weight: 500;
       margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(6px);
+      background: linear-gradient(90deg, #2DB7FF, #8639FF, #FF8A30);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .tagline-animate {
+      animation: taglineFadeIn 1.6s ease-out forwards 0.4s;
+    }
+
+    @keyframes taglineFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .highlight {
@@ -238,6 +265,11 @@
 
     <h1>Biziotech Solutions</h1>
     <div class="subtitle">Crafting smart web & app solutions</div>
+
+    <!-- Animated Tagline -->
+    <div class="tagline tagline-animate">
+      Transform your Business with Digital Excellence
+    </div>
 
     <p>
       Our official platform is <span class="highlight">under development</span>.<br />

@@ -3,12 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Biziotech Solutions • Coming Soon</title>
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  <!-- Basic SEO -->
+  <meta name="description" content="Biziotech Solutions is building smart, scalable web and app solutions for modern businesses. Our official platform is coming soon." />
 
-    /* ==== ANIMATED GRADIENT BACKGROUND ==== */
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="Biziotech Solutions • Coming Soon" />
+  <meta property="og:description" content="We are crafting powerful digital solutions with performance, automation, and data at the core." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.biziotech.com/" />
+  <!-- Optional: when you have a social preview image, update this -->
+  <!-- <meta property="og:image" content="https://www.biziotech.com/assets/preview.png" /> -->
+
+  <!-- Favicon (you upload this to /assets/favicon.png) -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ========= Animated Gradient Background ========= */
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Poppins", sans-serif;
       min-height: 100vh;
@@ -20,13 +39,14 @@
       background-size: 300% 300%;
       animation: biziotechGradient 18s ease infinite;
     }
+
     @keyframes biziotechGradient {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* ==== PRELOADER ==== */
+    /* ========= Preloader ========= */
     #preloader {
       position: fixed;
       inset: 0;
@@ -37,79 +57,45 @@
       z-index: 9999;
       transition: opacity 0.5s ease, visibility 0.5s ease;
     }
+
     #preloader.hidden {
       opacity: 0;
       visibility: hidden;
     }
+
     .spinner {
       width: 60px;
       height: 60px;
       border-radius: 999px;
-      border: 4px solid rgba(255,255,255,0.22);
+      border: 4px solid rgba(255, 255, 255, 0.22);
       border-top-color: #2DB7FF;
       border-right-color: #8639FF;
       border-bottom-color: #FF8A30;
       animation: spin 1s linear infinite;
     }
+
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
 
-    /* ==== MAIN CARD ==== */
+    /* ========= Main Card ========= */
     .card {
-      background: rgba(10, 10, 25, 0.85);
+      background: rgba(10, 10, 25, 0.88);
       border-radius: 24px;
       padding: 40px 28px 30px;
-      max-width: 520px;
-      width: 90%;
+      max-width: 540px;
+      width: 92%;
       text-align: center;
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(16px);
     }
 
-    /* ==== PURE CSS BIZIOTECH LOGO ==== */
-    .biziotech-logo {
-      position: relative;
+    .logo {
       width: 120px;
-      height: 90px;
-      margin: 0 auto 22px;
-    }
-
-    /* BACK LAYER */
-    .logo-back {
-      position: absolute;
-      width: 75%;
-      height: 75%;
-      left: 0;
-      top: 12px;
-      border-radius: 32px;
-      background: #0E1A35;
-      z-index: 1;
-      filter: brightness(1.2);
-    }
-
-    /* FRONT GRADIENT PILL */
-    .logo-front {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 32px;
-      background: linear-gradient(135deg, #2DB7FF, #4B39F5, #8639FF, #FF8A30);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-    }
-
-    /* ICON */
-    .logo-front span {
-      font-family: "Courier New", monospace;
-      font-size: 36px;
-      font-weight: 700;
-      color: white;
-      opacity: 0.95;
+      max-width: 40vw;
+      margin: 0 auto 20px;
+      display: block;
     }
 
     h1 {
@@ -139,7 +125,37 @@
       margin-bottom: 22px;
     }
 
-    /* ==== SOCIAL ICONS ==== */
+    /* ========= Email CTA ========= */
+    .email-section {
+      margin-bottom: 20px;
+    }
+
+    .email-text {
+      font-size: 13px;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+
+    .email-button {
+      display: inline-block;
+      padding: 9px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      text-decoration: none;
+      background: linear-gradient(90deg, #2DB7FF, #8639FF, #FF8A30);
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+    }
+
+    .email-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 9px 24px rgba(0, 0, 0, 0.45);
+      opacity: 0.97;
+    }
+
+    /* ========= Social Icons ========= */
     .social-row {
       display: flex;
       align-items: center;
@@ -159,14 +175,14 @@
       font-size: 15px;
       text-decoration: none;
       color: #ffffff;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
       transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
       font-weight: 700;
     }
 
     .social-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 9px 22px rgba(0,0,0,0.4);
+      box-shadow: 0 9px 22px rgba(0, 0, 0, 0.4);
       opacity: 0.95;
     }
 
@@ -176,13 +192,13 @@
     .social-fb { background: #1877F2; }      /* Facebook */
     .social-x  { background: #000000; }      /* X */
 
-    /* ==== FOOTER ==== */
+    /* ========= Footer ========= */
     .footer {
       font-size: 12px;
       opacity: 0.7;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       padding-top: 10px;
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
     .brand-footer {
@@ -190,101 +206,94 @@
       margin-top: 4px;
       opacity: 0.8;
     }
+
     .brand-footer strong {
       font-weight: 600;
     }
 
     @media (max-width: 480px) {
-      .card { padding: 30px 20px 24px; }
-      h1 { font-size: 24px; }
-      p { font-size: 14px; }
+      .card {
+        padding: 30px 20px 24px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- PRELOADER -->
+  <!-- ========== PRELOADER OVERLAY ========== -->
   <div id="preloader">
     <div class="spinner"></div>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="card">
-
-    <!-- PURE CSS LOGO -->
-    <div class="biziotech-logo">
-      <div class="logo-back"></div>
-      <div class="logo-front">
-        <span>&lt;/&gt;</span>
-      </div>
-    </div>
+  <!-- ========== MAIN CARD ========== -->
+  <main class="card" aria-label="Biziotech Coming Soon">
+    <!-- Your real logo (upload to /assets/biziotech-logo.png) -->
+    <img src="assets/biziotech-logo.png" alt="Biziotech Solutions Logo" class="logo" />
 
     <h1>Biziotech Solutions</h1>
     <div class="subtitle">Crafting smart web & app solutions</div>
 
     <p>
       Our official platform is <span class="highlight">under development</span>.<br />
-      We are building powerful digital solutions for businesses—
+      We are building powerful digital solutions for businesses —
       with performance, automation, and data at the core.
     </p>
 
-    <!-- SOCIAL ICONS -->
-    <div class="social-row">
+    <!-- Email Contact CTA -->
+    <section class="email-section" aria-label="Contact Email">
+      <div class="email-text">
+        Have a project in mind or need a tech partner? Reach us at:
+      </div>
+      <a class="email-button" href="mailto:contact@biziotech.com">
+        📧 contact@biziotech.com
+      </a>
+    </section>
 
-      <a class="social-btn social-ln" href="https://linkedin.com/company/biziotech" target="_blank">in</a>
+    <!-- Social Icons -->
+    <section class="social-row" aria-label="Biziotech Social Links">
+      <a class="social-btn social-ln" href="https://linkedin.com/company/biziotech" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        in
+      </a>
+      <a class="social-btn social-wa" href="https://whatsapp.com/channel/0029Vb7INCo9xVJeQE0lZ730" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel">
+        wa
+      </a>
+      <a class="social-btn social-ig" href="https://instagram.com/biziotech" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        ig
+      </a>
+      <a class="social-btn social-fb" href="https://www.facebook.com/biziotech" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        f
+      </a>
+      <a class="social-btn social-x" href="https://x.com/biziotechsol" target="_blank" rel="noopener noreferrer" aria-label="X">
+        x
+      </a>
+    </section>
 
-      <a class="social-btn social-wa" href="https://whatsapp.com/channel/0029Vb7INCo9xVJeQE0lZ730" target="_blank">wa</a>
-
-      <a class="social-btn social-ig" href="https://instagram.com/biziotech" target="_blank">ig</a>
-
-      <a class="social-btn social-fb" href="https://www.facebook.com/biziotech" target="_blank">f</a>
-
-      <a class="social-btn social-x" href="https://x.com/biziotechsol" target="_blank">x</a>
-
-      <!-- EMAIL CONTACT BUTTON -->
-<div style="margin-top: 10px; margin-bottom: 14px;">
-  <a href="mailto:contact@biziotech.com" 
-     style="
-      display: inline-block;
-      padding: 10px 18px;
-      font-size: 14px;
-      font-weight: 600;
-      color: white;
-      text-decoration: none;
-      background: linear-gradient(90deg, #2DB7FF, #8639FF, #FF8A30);
-      border-radius: 8px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-      transition: 0.2s;
-     ">
-    📧 contact@biziotech.com
-  </a>
-</div>
-
-
-    </div>
-
-    <div class="footer">
+    <!-- Footer -->
+    <footer class="footer">
       © <span id="year"></span> Biziotech Solutions • All rights reserved.
-    </div>
-
-    <div class="brand-footer">
-      Crafted with precision by <strong>Biziotech Solutions</strong>.
-    </div>
-
-  </div>
+      <div class="brand-footer">
+        Crafted with precision by <strong>Biziotech Solutions</strong>.
+      </div>
+    </footer>
+  </main>
 
   <script>
     // Dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Hide preloader
+    // Hide preloader once page is loaded
     window.addEventListener("load", function () {
-      setTimeout(() => {
+      setTimeout(function () {
         const pl = document.getElementById("preloader");
         if (pl) pl.classList.add("hidden");
-      }, 600);
+      }, 600); // small delay for smoother experience
     });
   </script>
-
 </body>
 </html>

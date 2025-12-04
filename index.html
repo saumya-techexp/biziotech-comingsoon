@@ -111,6 +111,52 @@
       margin-bottom: 22px;
     }
 
+    /* ==== Biziotech Logo (Pure CSS – No Image Needed) ==== */
+.biziotech-logo {
+  position: relative;
+  width: 120px;
+  height: 90px;
+  margin: 0 auto 22px;
+}
+
+/* BACK SHAPE */
+.logo-back {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  left: 0;
+  top: 12px;
+  border-radius: 32px;
+  background: #0E1A35; /* Dark navy */
+  z-index: 1;
+  filter: brightness(1.2);
+}
+
+/* FRONT SHAPE (GRADIENT PILL) */
+.logo-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #2DB7FF, #4B39F5, #8639FF, #FF8A30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+
+/* ICON */
+.logo-front span {
+  font-family: "Courier New", monospace;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  opacity: 0.95;
+}
+
+
     /* ==== SOCIAL ICONS ==== */
     .social-row {
       display: flex;
@@ -181,10 +227,17 @@
   </div>
 
   <!-- MAIN CARD -->
-  <div class="card">
+  <!-- <div class="card">
     <div class="logo-mark">
       <span>&lt;/&gt;</span>
-    </div>
+    </div> -->
+  <div class="biziotech-logo">
+  <div class="logo-back"></div>
+  <div class="logo-front">
+    <span>&lt;/&gt;</span>
+  </div>
+  </div>
+
 
     <h1>Biziotech Solutions</h1>
     <div class="subtitle">Crafting smart web & app solutions</div>
